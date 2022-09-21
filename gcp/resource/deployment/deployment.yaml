@@ -1,4 +1,4 @@
-# 這是k8s官方範例 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/ 
+# 這是k8s官方範例 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 apiVersion: apps/v1
 kind: Deployment
 metadata:
