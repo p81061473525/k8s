@@ -3,7 +3,6 @@
 ## 架構
 ```
 .
-├── ,gitlab-ci.yaml
 ├── Makefile
 ├── Readme.md
 ├── aws
@@ -32,14 +31,15 @@
 │       └── deployment
 │           └── deployment.yaml
 ├── gcp
-│   ├── ,gitlab-ci.yaml
 │   ├── Makefile
 │   ├── Readme.md
 │   ├── helm
 │   ├── init
+│   │   └── Readme.md
 │   └── resource
 │       ├── deployment
 │       │   └── deployment.yaml
+│       ├── ingress
 │       ├── service
 │       │   └── gcp_offical
 │       │       ├── my-Externalname.yaml
