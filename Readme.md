@@ -2,7 +2,6 @@
 
 ## 架構
 ```
-.
 ├── ,gitlab-ci.yaml
 ├── Makefile
 ├── Readme.md
@@ -39,6 +38,7 @@
 │   ├── init
 │   └── resource
 │       ├── deployment
+│       │   └── deployment.yaml
 │       ├── service
 │       │   └── gcp_offical
 │       └── volume
