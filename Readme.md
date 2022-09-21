@@ -2,6 +2,7 @@
 
 ## 架構
 ```
+.
 ├── ,gitlab-ci.yaml
 ├── Makefile
 ├── Readme.md
@@ -41,6 +42,9 @@
 │       │   └── deployment.yaml
 │       ├── service
 │       │   └── gcp_offical
+│       │       ├── my-Externalname.yaml
+│       │       ├── my-cluster-service.yaml
+│       │       └── my-nodeport-service.yaml
 │       └── volume
 │           ├── pv.yaml
 │           └── pvc-pod-demo.yaml
