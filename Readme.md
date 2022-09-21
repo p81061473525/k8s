@@ -40,6 +40,7 @@
 │       ├── deployment
 │       │   └── deployment.yaml
 │       ├── ingress
+│       ├── prode
 │       ├── service
 │       │   └── gcp_offical
 │       │       ├── my-Externalname.yaml
@@ -59,6 +60,7 @@
         ├── deployment
         └── service
             └── aws_offical
+
 ```
 ## 提交策略
 
