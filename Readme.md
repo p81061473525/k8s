@@ -32,21 +32,43 @@
 │           └── deployment.yaml
 ├── gcp
 │   ├── Makefile
+│   ├── Manage
+│   │   ├── HPA.yaml
+│   │   └── limit-example.yaml
 │   ├── Readme.md
 │   ├── helm
 │   ├── init
 │   │   └── Readme.md
 │   └── resource
+│       ├── configMap
+│       │   ├── configMap.yaml
+│       │   └── redis-configMap.yaml
+│       ├── context
+│       │   ├── Readme.md
+│       │   ├── config-demo
+│       │   └── config-demo-3rd
 │       ├── deployment
-│       │   └── deployment.yaml
+│       │   ├── deployment-2.yaml
+│       │   ├── deployment.yaml
+│       │   └── redis.yaml
 │       ├── ingress
+│       │   └── ingress.yaml
+│       ├── namespace
+│       │   └── namespace.yaml
 │       ├── prode
+│       │   └── exec-liveness.yaml
+│       ├── secrect
+│       │   └── secrect.yaml
 │       ├── service
 │       │   └── gcp_offical
 │       │       ├── my-Externalname.yaml
 │       │       ├── my-cluster-service.yaml
+│       │       ├── my-loadbalancer-service.yaml
 │       │       └── my-nodeport-service.yaml
+│       ├── stateful
+│       │   └── sample-stateful.yaml
 │       └── volume
+│           ├── pv-minikube.yaml
 │           ├── pv.yaml
 │           └── pvc-pod-demo.yaml
 └── minikube
@@ -60,7 +82,7 @@
         ├── deployment
         └── service
             └── aws_offical
-
 ```
+
 ## 提交策略
 
