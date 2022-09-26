@@ -45,7 +45,6 @@ spec:
 # kubernetes      ClusterIP      10.75.240.1     <none>           443/TCP           83m
 # my-lb-service   LoadBalancer   10.75.249.101   35.201.188.172   60000:31955/TCP   72s
 
-
 # curl http://35.201.188.172:60000/
 # Hello, world!
 # Version: 2.0.0
