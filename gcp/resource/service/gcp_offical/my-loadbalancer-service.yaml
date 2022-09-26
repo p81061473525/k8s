@@ -1,0 +1,51 @@
+# https://cloud.google.com/kubernetes-engine/docs/how-to/exposing-apps
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment-50001
+spec:
+  selector:
+    matchLabels:
+      app: products
+      department: sales
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: products
+        department: sales
+    spec:
+      containers:
+      - name: hello
+        image: "us-docker.pkg.dev/google-samples/containers/gke/hello-app:2.0"
+        env:
+        - name: "PORT"
+          value: "50001"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-lb-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: products
+    department: sales
+  ports:
+  - protocol: TCP
+    port: 60000
+    targetPort: 50001
+
+# ❯ k get svc
+# I0926 13:35:27.912275   74023 versioner.go:58] no Auth Provider found for name "gcp"
+# W0926 13:35:28.048103   74023 gcp.go:120] WARNING: the gcp auth plugin is deprecated in v1.22+, unavailable in v1.25+; use gcloud instead.
+# To learn more, consult https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
+# NAME            TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)           AGE
+# kubernetes      ClusterIP      10.75.240.1     <none>           443/TCP           83m
+# my-lb-service   LoadBalancer   10.75.249.101   35.201.188.172   60000:31955/TCP   72s
+
+# curl http://35.201.188.172:60000/
+# Hello, world!
+# Version: 2.0.0
+# Hostname: my-deployment-50001-c9b645487-j5974
