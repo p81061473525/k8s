@@ -1,4 +1,9 @@
-# k8s官方 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#use-a-named-port 
+# k8s官方 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#use-a-named-port
+# 筆記: 
+# Liveness probes : liveness probes to know when to restart a container   
+# Startup probes : startup probes to know when a container application has started
+# Readiness probes : readiness probes to know when a container is ready to start accepting traffic
+
 apiVersion: v1
 kind: Pod
 metadata:
