@@ -6,8 +6,8 @@
 `gcloud version`
 `gcloud init`
 `gcloud config list`
-`gcloud config configurations list`
-`gcloud config configurations activate ${PROFILE_NAME}`
+`gcloud config configurations list` 
+`gcloud config configurations activate ${PROFILE_NAME}` 
 
 ## IAM
 
