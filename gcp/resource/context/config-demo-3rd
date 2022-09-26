@@ -1,0 +1,36 @@
+# https://github.com/godleon/learning_kubernetes/blob/master/concept/howto_configure_kubeconfig.md
+# 我覺得找到的資料比較好，所以貼上來。
+
+# 預設所使用的 context
+current-context: federal-context
+
+apiVersion: v1
+
+kind: Config
+
+preferences:
+  colors: true
+
+# cluster & certificate 資訊 (可能會有很多個)
+clusters:
+- cluster:
+    api-version: v1
+    certificate-authority: /coreos-bootcfg/assets/tls/ca.pem
+    server: https://10.102.2.21
+  name: coreos-cluster
+
+# 使用者資訊(可能會有很多個)
+users:
+- name: default-admin
+  user:
+    client-certificate: /coreos-bootcfg/assets/tls/admin.pem
+    client-key: /coreos-bootcfg/assets/tls/admin-key.pem
+
+# 為上述 cluster, user, namespace 的組合，使用者必須根據自己的使用環境設定正確的 context
+# 選擇搭配正確的 cluster, user & namespace 資訊
+contexts:
+- context:
+    cluster: coreos-cluster
+#    namespace: chisel-ns
+    user: default-admin
+  name: federal-context
