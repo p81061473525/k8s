@@ -1,14 +1,11 @@
 # 這是k8s官方範例 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-# Install ping and curl 
-# apt update
-# apt install iputils-ping curl -y
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
     app: nginx
-  namespace: nginx
+  namespace: nginx2
 spec:
   replicas: 3
   selector:

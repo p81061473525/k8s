@@ -1,26 +1,22 @@
 # 這是k8s官方範例 https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-# Install ping and curl 
-# apt update
-# apt install iputils-ping curl -y
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: redis-deployment
   labels:
-    app: nginx
-  namespace: nginx
+    app: redis
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: redis
   template:
     metadata:
       labels:
-        app: nginx
+        app: redis
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
+      - name: redis
+        image: redis:7.0.5
         ports:
-        - containerPort: 80
+        - containerPort: 6379
