@@ -9,6 +9,11 @@
 `gcloud config configurations list` 
 `gcloud config configurations activate ${PROFILE_NAME}` 
 
+```
+gcloud container clusters create redis-test \
+  --num-nodes=3 \
+```
+`gcloud container clusters get-credentials redis-test`
 # common variable  
 
 ```
