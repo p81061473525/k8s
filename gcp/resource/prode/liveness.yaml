@@ -1,11 +1,11 @@
 # k8s官方 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#use-a-named-port
 # 筆記: https://medium.com/learn-or-die/kubernetes-%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%9F%A5-59ee2a798115 
 # Liveness probes : liveness probes to know when to restart a container 
-# 存活探針 :
+# 存活探針 : 何時重啟容器
 # Startup probes : startup probes to know when a container application has started 
-# 啟動探針 : 
+# 啟動探針 : 容器應用是否已經成功啟動了
 # Readiness probes : readiness probes to know when a container is ready to start accepting traffic 
-# 就緒探針 : 
+# 就緒探針 : 這個容器是否已經準備就緒
 
 apiVersion: v1
 kind: Pod
