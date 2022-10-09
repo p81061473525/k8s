@@ -1,0 +1,14 @@
+# https://cloud.google.com/kubernetes-engine/docs/concepts/service?hl=zh-TW
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-cip-service
+  namespace: nginx
+spec:
+  selector:
+    app: nginx
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

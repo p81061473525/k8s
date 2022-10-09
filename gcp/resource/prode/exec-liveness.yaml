@@ -1,4 +1,5 @@
-# k8s官方 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#use-a-named-port 
+# https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/ 
+
 apiVersion: v1
 kind: Pod
 metadata:
