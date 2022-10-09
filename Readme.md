@@ -38,7 +38,6 @@
 │   ├── Readme.md
 │   ├── helm
 │   ├── init
-│   │   └── Readme.md
 │   └── resource
 │       ├── configMap
 │       │   ├── configMap.yaml
@@ -56,17 +55,20 @@
 │       ├── namespace
 │       │   └── namespace.yaml
 │       ├── prode
-│       │   └── exec-liveness.yaml
+│       │   ├── exec-liveness.yaml
+│       │   └── liveness.yaml
 │       ├── secrect
 │       │   └── secrect.yaml
 │       ├── service
 │       │   └── gcp_offical
 │       │       ├── my-Externalname.yaml
+│       │       ├── my-cluster-service-lab-nginx.yaml
 │       │       ├── my-cluster-service.yaml
 │       │       ├── my-loadbalancer-service.yaml
 │       │       └── my-nodeport-service.yaml
 │       ├── stateful
-│       │   └── sample-stateful.yaml
+│       │   ├── sample-stateful-nginx.yaml
+│       │   └── sample-stateful-redis.yaml
 │       └── volume
 │           ├── pv-minikube.yaml
 │           ├── pv.yaml
@@ -82,6 +84,7 @@
         ├── deployment
         └── service
             └── aws_offical
+
 ```
 
 ## 提交策略
