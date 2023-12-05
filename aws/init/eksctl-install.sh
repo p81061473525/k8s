@@ -4,7 +4,7 @@
 set -ex
 
 # Variable
-CLUSTER_NAME=tester
+CLUSTER_NAME=tester2
 VERSION=1.25
 REGION=ap-northeast-1
 NODEGROUP_NAME=linux
