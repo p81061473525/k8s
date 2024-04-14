@@ -5,7 +5,7 @@ set -ex
 
 # Variable
 CLUSTER_NAME=tester2
-VERSION=1.25
+VERSION=1.29
 REGION=ap-northeast-1
 NODEGROUP_NAME=linux
 # NODE_TYPE=t2.micro
